@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% include "navbar.html" %}
+
+
+{% block body %}
+    <div class="container mx-auto px-6 text-center py-20">
+      <h2 class="mb-6 text-4xl font-bold text-center text-black">
+        Upload a FLAIR Segmentation Image
+      </h2>
+      <!-- <h3 class="my-4 text-2xl text-white">
+        
+      </h3> -->
+      <form action='/predict' method='POST' enctype='multipart/form-data'>
+        <input type='file' name='file' accept="image/png, image/jpeg"><br><br>
+        <input type='submit' style="background-color: #667eea; color: white;"   name='upload_btn' value='Classify' class="font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider">
+      </form>
+      <!-- <a href="/predict">
+        <button
+        class="bg-white font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider">
+        Predict
+      </button>
+    </a> -->
+    </div>
+{% endblock %}
