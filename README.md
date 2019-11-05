@@ -5,6 +5,21 @@ The data was obtained from the MICCAI 2013 Challenge on Multimodal Brain Tumor S
 
 * Menze et al., The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS), IEEE Trans. Med. Imaging, 2015.
 
+### Training / Validation
+Train: LabelList (2125 items)
+x: ImageList
+Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256)
+y: CategoryList
+False.png,False.png,True.png,True.png,False.png
+Path: /storage/brats2013/brain_segmentation;
+
+Valid: LabelList (1415 items)
+x: ImageList
+Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256)
+y: CategoryList
+True.png,True.png,True.png,True.png,True.png
+Path: /storage/brats2013/brain_segmentation;
+
 ## Metric
 
 Dice Coefficient: 
@@ -20,6 +35,12 @@ We then only train the head of the model initially. Later, we unfreeze the layer
 ![cnn](https://miro.medium.com/max/3480/1*uUYc126RU4mnTWwckEbctw@2x.png)
 
 The FCN (Fully Convoluted Network) obtained a **dice "score" of 0.86**
+
+<img src="top_losses.png" alt="top_losses" height=500 width=500>
+
+### Progressive Resizing
+
+Progressive resizing was used, where an image size of 64 was first trained, and then those weights were applied to the upscaling of image size 128. This was done progressively until an image size of 256. 
 
 ## Web Application
 
@@ -57,6 +78,8 @@ Dependencies:
 
 
 ## Note
+
+![binary](binary.png)
 
 Due to size limitations on Github, the pkl file was left in a .gitignore. The model was trained and tuned using resnet50 along with fastai libraries and factory functions. It was necessary to use cloud GPU services, and in this case, Paperspace Gradient was used. 
 
