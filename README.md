@@ -7,19 +7,9 @@ The data was obtained from the MICCAI 2013 Challenge on Multimodal Brain Tumor S
 
 ### Training / Validation
 
-**Train**: LabelList (2125 items)
+**Train**: LabelList (2125 items) of ImageList (256, 256, 3)
 
-x: ImageList (3, 256, 256)
-
-y: CategoryList (False, True)
-
-
-**Valid**: LabelList (1415 items)
-
-x: ImageList (3, 256, 256)
-
-y: CategoryList (False, True)
-
+**Valid**: LabelList (1415 items) of ImageList (256, 256, 3)
 
 ## Metric
 
