@@ -1,9 +1,9 @@
-# Brain Tumor Detection
+# Brain Tumor Detection using Transfer Learning
 
 ## Data
 The data was obtained from the MICCAI 2013 Challenge on Multimodal Brain Tumor Segmentation
 
-* Menze et al., The Multimodal Brain TumorImage Segmentation Benchmark (BRATS), IEEE Trans. Med. Imaging, 2015.
+* Menze et al., The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS), IEEE Trans. Med. Imaging, 2015.
 
 ## Model
 The machine learning model relies on transfer learning from resnet 50. 
