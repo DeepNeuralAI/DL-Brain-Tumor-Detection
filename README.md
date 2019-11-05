@@ -1,15 +1,5 @@
 # Brain Tumor Detection
 
-## Web Application
-
-The following web application was built using Flask. A lightweight API is built that loads the model from a pkl file. When a user uploads an image, the image is pre-processed and then run through the model to obtain a prediction.
-
-This prediction, and probability of class is then passed to a render template. 
-
-### Later Work
-
-Future work would include separation of concerns, where the front end server runs React, while the backend server runs Flask with a lightweight API with simple endpoints that return JSON.
-
 ## Data
 The data was obtained from the MICCAI 2013 Challenge on Multimodal Brain Tumor Segmentation
 
@@ -23,7 +13,17 @@ We then only train the head of the model initially. Later, we unfreeze the layer
 
 ![cnn](https://miro.medium.com/max/3480/1*uUYc126RU4mnTWwckEbctw@2x.png)
 
-## FLAIR
+## Web Application
+
+The following web application was built using Flask. A lightweight API is built that loads the model from a pkl file. When a user uploads an image, the image is pre-processed and then run through the model to obtain a prediction.
+
+This prediction, and probability of class is then passed to a render template. 
+
+### Later Work
+
+Future work would include separation of concerns, where the front end server runs React, while the backend server runs Flask with a lightweight API with simple endpoints that return JSON.
+
+### FLAIR
 Currently, this model only classifies Fluid-attenuated inversion recovery (FLAIR) segmentations. 
 
 
