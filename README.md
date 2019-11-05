@@ -5,6 +5,12 @@ The data was obtained from the MICCAI 2013 Challenge on Multimodal Brain Tumor S
 
 * Menze et al., The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS), IEEE Trans. Med. Imaging, 2015.
 
+## Metric
+
+Dice Coefficient: 
+
+![dice](https://wikimedia.org/api/rest_v1/media/math/render/svg/174f40f295f784c6fc6f78d359503821b757a353)
+
 ## Model
 The machine learning model relies on transfer learning from resnet 50. 
 The basic principle is to keep all the convolutional layers with their weights pretrained. 
@@ -12,6 +18,8 @@ The basic principle is to keep all the convolutional layers with their weights p
 We then only train the head of the model initially. Later, we unfreeze the layers and start the process of fine-tuning using differential learning rates.
 
 ![cnn](https://miro.medium.com/max/3480/1*uUYc126RU4mnTWwckEbctw@2x.png)
+
+The FCN (Fully Convoluted Network) obtained a **dice "score" of 0.86**
 
 ## Web Application
 
@@ -22,6 +30,8 @@ This prediction, and probability of class is then passed to a render template.
 ### Later Work
 
 Future work would include separation of concerns, where the front end server runs React, while the backend server runs Flask with a lightweight API with simple endpoints that return JSON.
+
+For segmentation, the architecture is best changed to u-net which is better designed for biomedical imaging segmentation
 
 ### FLAIR
 Currently, this model only classifies Fluid-attenuated inversion recovery (FLAIR) segmentations. 
