@@ -6,19 +6,20 @@ The data was obtained from the MICCAI 2013 Challenge on Multimodal Brain Tumor S
 * Menze et al., The Multimodal Brain Tumor Image Segmentation Benchmark (BRATS), IEEE Trans. Med. Imaging, 2015.
 
 ### Training / Validation
-Train: LabelList (2125 items)
-x: ImageList
-Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256)
-y: CategoryList
-False.png,False.png,True.png,True.png,False.png
-Path: /storage/brats2013/brain_segmentation;
 
-Valid: LabelList (1415 items)
-x: ImageList
-Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256),Image (3, 256, 256)
-y: CategoryList
-True.png,True.png,True.png,True.png,True.png
-Path: /storage/brats2013/brain_segmentation;
+**Train**: LabelList (2125 items)
+
+x: ImageList (3, 256, 256)
+
+y: CategoryList (False, True)
+
+
+**Valid**: LabelList (1415 items)
+
+x: ImageList (3, 256, 256)
+
+y: CategoryList (False, True)
+
 
 ## Metric
 
