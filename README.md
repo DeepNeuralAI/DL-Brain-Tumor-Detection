@@ -17,6 +17,10 @@ Dice Coefficient:
 
 ![dice](https://wikimedia.org/api/rest_v1/media/math/render/svg/174f40f295f784c6fc6f78d359503821b757a353)
 
+### Results
+
+The FCN (Fully Convoluted Network) obtained a **dice "score" of 0.88**
+
 ## Model
 The machine learning model relies on transfer learning from resnet 50. 
 The basic principle is to keep all the convolutional layers with their weights pretrained. 
@@ -24,8 +28,6 @@ The basic principle is to keep all the convolutional layers with their weights p
 We then only train the head of the model initially. Later, we unfreeze the layers and start the process of fine-tuning using differential learning rates.
 
 ![cnn](https://miro.medium.com/max/3480/1*uUYc126RU4mnTWwckEbctw@2x.png)
-
-The FCN (Fully Convoluted Network) obtained a **dice "score" of 0.86**
 
 <img src="top_losses.png" alt="top_losses" height=500 width=500>
 
